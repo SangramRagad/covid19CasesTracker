@@ -1,38 +1,136 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* Global Styles */
+:root {
+  --primary-color: #dc3545;
+  --dark-color: #333333;
+  --light-color: #e7e7e7;
+
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.6;
+  /* background-color: #c0c0c0; */
+  background: #f0f8ff;
+  color: #333;
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-size {
+  font-size: x-large;
+}
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-right {
+  text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.text-left {
+  text-align: left;
+}
+
+.navStyle {
+  display: block;
+  margin: 20px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 4px;
+  text-align: center;
+  color: #ffffff;
+  background: #fa8072;
+  border: #ccc solid 1px;
+  border-radius: 10px;
+}
+/* body {
+  background-color: #808080;
+} */
+.statebg {
+  display: inline-block;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding: 0.5rem;
+  margin: 10px 30px;
+  background: lightgray;
+  color: #333;
+  border-radius: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 420px);
+  grid-gap: 0.2px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(1, 450px);
+    /* padding: 0.1rem 0.1rem; */
+    margin-left: 25px;
+    width: 120vw;
+  }
+  .navStyle {
+    font-size: x-small;
+    width: 112vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Cards */
+.card {
+  padding: 0.8rem 0.5rem;
+  border: #ccc 1px solid;
+  border-radius: 10px;
+  margin: 15px 15px;
+  background-color: #999999;
 }
 
-.App-link {
-  color: #61dafb;
+.innerCard {
+  /* background-color: #b0e0e6; */
+  background-color: #6897bb;
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.innerCard:hover {
+  /* background-color: #b0e0e6; */
+  text-align: center;
+  margin-right: 2px;
+  margin-left: 2px;
+  padding-right: 5px;
+  font-size: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: large;
+  font-weight: bolder;
+  padding: 0.5rem;
+  margin: 10px 30px;
+  background: var(--light-color);
+  color: #555;
+  border-radius: 10px;
 }
